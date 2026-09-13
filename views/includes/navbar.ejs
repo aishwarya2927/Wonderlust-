@@ -44,11 +44,11 @@
 
        <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new" id="add-new-list">Airbnb your home</a>
-        <% if(!currentUser){%>
+        <% if(typeof currentUser === "undefined" || !currentUser){%>
         <a class="nav-link" href="/signup"> <b>Signup</b> </a>
         <a class="nav-link" href="/login"><b>Log in</b></a>
         <%}%>
-        <% if(currentUser){ %>
+        <% if(typeof currentUser !== "undefined" && currentUser){ %>
         <a class="nav-link" href="/logout" id="add-new-list">Log out</a>
         <%}%>
       </div>

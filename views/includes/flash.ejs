@@ -1,12 +1,12 @@
 
-<% if(success && success.length){ %>
+<% if(typeof success !== "undefined" && success && success.length){ %>
 <div class="alert alert-success alert-sismissible fade show col-6 offset-3">
     <%= success %>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <%}%>
 
-<% if(error && error.length){ %>
+<% if(typeof error !== "undefined" && error && error.length){ %>
 <div class="alert alert-danger alert-sismissible fade show col-6 offset-3">
     <%= error %>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

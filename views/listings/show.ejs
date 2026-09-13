@@ -8,8 +8,8 @@
       <img src="<%=listing.image.url%>" class="card-img-top show-img" alt="listing_image" />
  <div class="card-body">
              <p class="card-text">
-           Owned by : <%= listing.owner.username%><br>
-               &#8377; <%= listing.price.toLocaleString("en-IN") %> <br>
+            Owned by : <%= (listing.owner && listing.owner.username) ? listing.owner.username : 'Host' %><br>
+                &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : '0' %> <br>
             <%= listing.description %> <br>
 
           <%= listing.location %> <br>
@@ -20,7 +20,7 @@
       </div>
     </div>
    <br>
- <% if(currentUser && listing.owner._id.equals(currentUser._id)) { %>
+ <% if(typeof currentUser !== "undefined" && currentUser && listing.owner && listing.owner._id.equals(currentUser._id)) { %>
 <div class="btns">
  <a class=" btn btn-dark offset-3 edit-btn" href="/listings/<%= listing._id %>/edit">Edit</a> 
    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
@@ -31,7 +31,7 @@
 
 <hr>
 
-<% if(currentUser) { %>
+<% if(typeof currentUser !== "undefined" && currentUser) { %>
 <div class="col-8 offset-3 mt-3 mb-3">
   <h4>Leave a Review </h4>
   <form action="/listings/<%=listing._id%>/reviews" method="POST" novalidate n class="needs-validation">
