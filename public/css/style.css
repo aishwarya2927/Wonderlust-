@@ -1,0 +1,150 @@
+/* General Layout & Typography */
+body {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: #ffffff !important;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+footer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.f-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e0e0e0;
+  gap: 0.5rem;
+}
+
+.f-info-socials {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1.3rem;
+  color: #484848;
+}
+
+.f-info-socials i {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.f-info-socials i:hover {
+  color: #fe424d;
+  transform: translateY(-2px);
+}
+
+.f-info-brand {
+  font-size: 0.95rem;
+  color: #717171;
+}
+
+.f-info-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #717171;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+  color: #222222;
+}
+
+/* Cards & Listings */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  background-color: transparent !important;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.02);
+}
+
+.card-body {
+  padding: 0.5rem 0 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.listing-link:hover {
+  color: inherit;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-search {
+  background-color: #fe424d !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+  padding: 0.4rem 1.2rem !important;
+  border: none !important;
+}
+
+.btn-search:hover {
+  background-color: #e0323c !important;
+}
+
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Details Page */
+.show-img {
+  height: 45vh !important;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}

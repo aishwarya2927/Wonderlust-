@@ -1,0 +1,52 @@
+/* Starability Rating System */
+.starability-slot {
+  display: block;
+  position: relative;
+  width: 150px;
+  min-height: 40px;
+  padding: 0;
+  border: none;
+}
+
+.starability-slot > input {
+  position: absolute;
+  margin-right: -100%;
+  opacity: 0;
+}
+
+.starability-slot > input:checked ~ label,
+.starability-slot > input:focus ~ label {
+  color: #fe424d;
+}
+
+.starability-slot > input:hover ~ label {
+  color: #fe424d;
+}
+
+.starability-slot > label {
+  float: right;
+  width: 25px;
+  height: 25px;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.starability-slot > label::before {
+  content: "★";
+}
+
+/* Starability result display */
+.starability-result {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.starability-result[data-rating="1"]::before { content: "★☆☆☆☆"; color: #fe424d; }
+.starability-result[data-rating="2"]::before { content: "★★☆☆☆"; color: #fe424d; }
+.starability-result[data-rating="3"]::before { content: "★★★☆☆"; color: #fe424d; }
+.starability-result[data-rating="4"]::before { content: "★★★★☆"; color: #fe424d; }
+.starability-result[data-rating="5"]::before { content: "★★★★★"; color: #fe424d; }
