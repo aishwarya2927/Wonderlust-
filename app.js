@@ -18,7 +18,8 @@ const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
 
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
+const connectMongo = require("connect-mongo");
+const MongoStore = connectMongo.create ? connectMongo : (connectMongo.MongoStore || connectMongo.default);
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
